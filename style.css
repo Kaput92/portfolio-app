@@ -7,6 +7,8 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    font-weight: 800;
+    font-size: large;
 }
 
 h1 {
