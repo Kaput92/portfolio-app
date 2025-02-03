@@ -1,5 +1,5 @@
 body {
-    background-color: antiquewhite;
+    background-color: rgba(197, 182, 163, 0.479);
     text-align: justify;
 }
 
@@ -29,6 +29,25 @@ h3 {
     cursor: pointer;
 }
 
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.tableHide {
+    display: none;
+}
+
+.project-list td a {
+    text-decoration: none;
+    color: black;
+}
+
+.project-one {
+    cursor: pointer;
+    list-style-type: circle;
+}
+
 .works {
     list-style-type: none;
     line-height: 30px;
@@ -56,6 +75,6 @@ footer {
 /* JS */
 
 .dark-theme {
-    background-color: #333;
+    background-color: #333333b6;
     color: #f4f4f4;
 }
