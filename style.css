@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
 
 
+/* Aggiungi una texture di "grain" per il background simile a un vecchio giornale */
 body {
-    background: linear-gradient(0deg, rgba(137, 138, 134, 0.6) 0%, rgba(248, 235, 162, 0.555) 100%);;
+    background: url('https://www.transparenttextures.com/patterns/paper-4.png'), /* Texture carta dettagliata */
+                linear-gradient(135deg, #e9e4d1 20%, #d6d3cd 50%, #a5a298 100%);
+    background-size: cover, 100% 100%;
+    background-attachment: fixed; /* Fissa lo sfondo per dare l'illusione di profondità */
     text-align: justify;
+    font-family: 'Inknut Antiqua', serif;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2); /* Ombra interna per l'effetto di usura */
 }
 
+/* Navbar */
 .nav {
     list-style-type: none;
     display: flex;
@@ -14,6 +21,7 @@ body {
     font-size: large;
 }
 
+/* Main container */
 .main {
     display: flex;
     justify-content: center;
@@ -21,21 +29,27 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.425);
     text-align: center;
     margin: 100px 250px;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Inknut Antiqua';
+    background-color: rgba(133, 110, 110, 0.8); /* Colore di fondo per far risaltare l'effetto carta */
+    border-radius: 10px;
 }
 
+/* Header */
 h1 {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    color: #3b2a25; /* Colore leggermente più scuro per migliorare la leggibilità */
 }
 
-
+/* Subheading */
 h3 {
     text-align: center;
+    color: #5a3c29;
 }
 
+/* Lightbulb icon */
 .fa-lightbulb {
     font-size: 20px;
     opacity: 0.7;
@@ -46,6 +60,7 @@ h3 {
     cursor: pointer;
 }
 
+/* Table */
 table {
     border: 1px solid black;
     width: 80vh;
@@ -54,6 +69,8 @@ table {
     bottom: 0;
     margin: 0 auto;
     height: 400px;
+    background-color: rgba(133, 110, 110, 0.8); /* Aggiungi un effetto di sfondo semitrasparente */
+    border-radius: 5px; /* Bordo arrotondato */
 }
 
 .tableHide {
