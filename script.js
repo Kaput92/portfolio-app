@@ -1,108 +1,75 @@
-const links = document.getElementsByClassName('link');
-const bulb = document.getElementById('fa-lightbulb');
-const table = document.querySelector('table');
-const anchor = document.querySelectorAll('a');
-const list = document.querySelector('.project-one');
+/* Menu */
 
-    list.addEventListener('click', () => {
-    table.classList.toggle('tableHide');
-    });
+const menu = document.querySelector(".menu");
+const closeMenu = document.querySelector(".close-menu");
+const nav = document.querySelector(".nav");
 
 
+menu.addEventListener("click", () => {
+  nav.style.visibility = "visible";
+  nav.classList.add("visible");
+  closeMenu.style.visibility = "visible";
+  menu.style.visibility = "hidden";
+});
 
-bulb.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
+closeMenu.addEventListener("click", () => {
+  nav.classList.remove("visible");
+  closeMenu.style.visibility = "hidden";
+  menu.style.visibility = "visible";
 
-    if (document.body.classList.contains('dark-theme')) {
+  setTimeout(() => {
+    nav.style.visibility = "hidden";
+  }, 0);
+});
 
-        table.style.borderColor = 'white';
+/* Main */
 
-        for (let a of anchor){
-        a.style.color = 'white'
-    };
+const main = document.querySelector(".main");
 
-        for (let link of links) {
-        link.style.color = 'white'
-        };
-}
-    else {
+/* Content */
+const about = document.getElementById("about");
+const aboutContent = document.getElementById("about-content");
 
-        table.style.borderColor = '';
+aboutContent.addEventListener("click", () => {
+  about.classList.toggle("active");
+  projects.classList.remove("active");
+  contact.classList.remove("active");
 
-        for (let a of anchor){
-            a.style.color = ''
-        };
+  main.style.visibility = "hidden";
 
-        for (let link of links){
-        link.style.color = ''
-        };
-    }
-})
+  if (!about.classList.contains("active")) {
+    main.style.visibility = "visible";
+  }
+});
 
-/* Image Slider */
+/* Projects */
+const projects = document.getElementById("projects");
+const projectsContent = document.getElementById("projects-content");
 
-const imgUrlsArr = [
-    "Media/photo-1460794418188-1bb7dba2720d.avif",
-    "Media/photo-1731612166799-2fbba4e93c42.avif",
-    "Media/photo-1571171637578-41bc2dd41cd2.avif"
-  ];
-  
-  const articleContainer = document.getElementById("article-container");
-  
-  articleContainer.innerHTML = `<img src="${imgUrlsArr[0]}" class="image" />`;
-  
-  let imgIndex = 0;
-  
-  function previousImg() {
-    if (imgIndex > 0 && imgIndex < imgUrlsArr.length) {
-        imgIndex--;
-    } else {
-        imgIndex = imgUrlsArr.length - 1;
-    }
+projectsContent.addEventListener("click", () => {
+  projects.classList.toggle("active");
+  about.classList.remove("active");
+  contact.classList.remove("active");
 
-    changeImage(imgIndex);
-}
+  main.style.visibility = "hidden";
 
-function nextImg() {
-    if (imgIndex >= 0 && imgIndex < imgUrlsArr.length - 1) {
-        imgIndex++;
-    } else {
-        imgIndex = 0;
-    }
+  if (!projects.classList.contains("active")) {
+    main.style.visibility = "visible";
+  }
+});
 
-    changeImage(imgIndex);
-}
+/* Contact */
+const contact = document.getElementById("contact");
+const contactContent = document.getElementById("contact-content");
 
-function showImage(index) {
-    articleContainer.innerHTML = `<img src="${imgUrlsArr[index]}" class="image visible" />`;
-}
+contactContent.addEventListener("click", () => {
+  contact.classList.toggle("active");
+  projects.classList.remove("active");
+  about.classList.remove("active");
 
-/* Funzione per cambiare immagine con transizione */
-function changeImage(index) {
-    const img = document.createElement('img');
-    img.src = imgUrlsArr[index];
-    img.classList.add('image');
-    
-    // Aggiungi l'immagine al container
-    articleContainer.innerHTML = '';
-    articleContainer.appendChild(img);
+  main.style.visibility = "hidden";
 
-    // Ritardo per la transizione (minimo per far partire la transizione)
-    setTimeout(() => {
-        img.classList.add('visible');
-    }, 10);
-}
-
-  /* Image Slider Auto Play */
-
-  function startAutoPlay() {
-    setInterval(() => {
-        nextImg();
-    }, 4000); // Cambia immagine ogni 4 secondi
-}
-
-// Mostra la prima immagine all'avvio
-showImage(imgIndex);
-
-// Avvia l'auto-play
-startAutoPlay();
+  if (!contact.classList.contains("active")) {
+    main.style.visibility = "visible";
+  }
+});

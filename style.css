@@ -1,186 +1,275 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
 
-
-/* Aggiungi una texture di "grain" per il background simile a un vecchio giornale */
 body {
-    background: url('https://www.transparenttextures.com/patterns/paper-4.png'), /* Texture carta dettagliata */
-                linear-gradient(135deg, #e9e4d1 20%, #d6d3cd 50%, #a5a298 100%);
-    background-size: cover, 100% 100%;
-    background-attachment: fixed; /* Fissa lo sfondo per dare l'illusione di profondità */
-    text-align: justify;
-    font-family: 'Inknut Antiqua', serif;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2); /* Ombra interna per l'effetto di usura */
+  text-align: justify;
+  font-family: "Inknut Antiqua", serif;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  background-image: linear-gradient( #243949 0%, #517fa4 100%);
 }
 
-/* Navbar */
+/* two sides */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* nav */
+
 .nav {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 800;
-    font-size: large;
+  height: 101.7vh;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 2px solid transparent;
+  background: rgba(102, 127, 161, 0.637);
+  text-shadow: 1px 1px 1px #000;
+  font-size: 1.2rem;
+  visibility: hidden;
+  transition: width 0.5s, visibility 0.5s, border-color 0.1s;
 }
 
-/* Main container */
+.nav.visible {
+  width: 200px;
+  visibility: visible;
+  border-right-color: #ffffff;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav.visible ul {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.nav:not(.visible) ul {
+  transition-delay: 0s;
+}
+
+.nav ul li a {
+  position: relative;
+  left: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav ul li a:hover {
+  color: rgba(206, 188, 188, 0.89);
+  transition: 0.3s ease-in-out;
+}
+
+.nav ul li:hover {
+  margin-left: 25px;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+/* menu buttons */
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.close-menu {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  font-size: 2rem;
+  padding: 15px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  cursor: pointer;
+  z-index: 2;
+  visibility: hidden;
+}
+
+/* content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* about */
+
+.about.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(73, 141, 237, 0.772);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about img {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 1px 1px 10px #000;
+}
+
+/* projects */
+
+.projects.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.projects {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(73, 141, 237, 0.772);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.projects h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projects img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 1px 1px 10px #000;
+}
+
+/* contact */
+
+.contact.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(73, 141, 237, 0.772);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact .ref {
+  font-size: 3rem;
+  color: #ffffffc6;
+  text-shadow: 1px 1px 10px #000;
+}
+
+.contact p span {
+  color: #edfe54;;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.contact p a {
+  text-decoration: none;
+  color: #edfe54;;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/* main */
+
 .main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.425);
-    text-align: center;
-    margin: 100px 250px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Inknut Antiqua';
-    background-color: rgba(133, 110, 110, 0.8); /* Colore di fondo per far risaltare l'effetto carta */
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-/* Header */
-h1 {
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    color: #3b2a25; /* Colore leggermente più scuro per migliorare la leggibilità */
+.main h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
 }
 
-/* Subheading */
-h3 {
-    text-align: center;
-    color: #5a3c29;
-}
-
-/* Lightbulb icon */
-.fa-lightbulb {
-    font-size: 20px;
-    opacity: 0.7;
-    position: relative;
-    bottom: 180px;
-    padding-right: 400px;
-    float: right;
-    cursor: pointer;
-}
-
-/* Table */
-table {
-    border: 1px solid black;
-    width: 80vh;
-    padding-left: 70px;
-    position: relative;
-    bottom: 0;
-    margin: 0 auto;
-    height: 400px;
-    background-color: rgba(133, 110, 110, 0.8); /* Aggiungi un effetto di sfondo semitrasparente */
-    border-radius: 5px; /* Bordo arrotondato */
-}
-
-.tableHide {
-    display: none;
-}
-
-.project-list td a {
-    text-decoration: none;
-    color: black;
-}
-
-.project-one {
-    position: relative;
-    margin: 50px 50px;
-    cursor: pointer;
-    list-style-type: circle;
-}
-
-.works {
-    list-style-type: none;
-    line-height: 30px;
-
-}
-
-.link {
-    text-decoration: none;
-    color: rgb(0, 0, 0)
-}
-
-.icons {
-    font-size: 50px;
-    opacity: 0.7;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-footer {
-    text-align: right;
-}
-
-
-/* Image Slider */
-
-section {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-  }
-  
-  .image {
-    width: 400px;
-    height: 400px;
-    animation: slide 0.5s linear;
-  }
-  
-  @keyframes slide {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  #leftArrow {
-    all: unset;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0.5rem;
-    color: #05d9e8;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  #rightArrow {
-    all: unset;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 0.5rem;
-    color: #05d9e8;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  #leftArrow:hover,
-  #rightArrow:hover {
-    background: rgb(0, 0, 0, 0.2);
-  }
-
-  .image {
-    object-fit:cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .image.visible {
-    opacity: 1;
-  }
-
-/* JS */
-
-.dark-theme {
-    background: #333333b6;
-    color: #f4f4f4;
+.main img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 1px 1px 10px #000;
+  border-radius: 50%;
 }

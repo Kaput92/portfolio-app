@@ -1,79 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <title>My Portfolio</title>
-    </head>
-    <body>
-        <ul class="nav">
-            <li>Emanuele Caputo</li>
-            <li>Based in Italy</li>
-            <li>Works - Contact</li>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    
+
+    <div class="wrapper">
+      <div class="nav">
+        <i class="fa fa-bars menu"></i>
+        <i class="fa fa-close close-menu"></i>
+
+        <ul>
+          <li id="about-content"><a href="#about">About</a></li>
+          <li id="projects-content"><a href="#projects">Projects</a></li>
+          <li id="contact-content"><a href="#contact">Contact</a></li>
         </ul>
-        <h1>About Me</h1>
+      </div>
+      <div class="content">
+
+        
         <div class="main">
-            <i class="fa-regular fa-lightbulb" id="fa-lightbulb"></i>
-            <h2>Hi! I'm Emanuele, an Ispiring Front End Developer based in Italy.</h2>
-
-            <p>I'm also a Hip Hop Music Producer specialized in the Sampling Art for create something new from an old vibes.</p>
-
-            <p>In my free time i spend my time in some ways like playing videogames, read books about IT and going out with friends.</p>
+          <h1>My Portfolio</h1>
+          <img src="https://images.unsplash.com/photo-1517796931930-443b6f13cf65?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
         </div>
-        <h3>My Works</h3>
-        <ul class="works">
-            <div class="container">
-                <section>
-                    <article id="article-container">
 
-                    </article>
-                    <div>
-                      <button id="leftArrow" onclick=previousImg()>❮</button>
-                      <button id="rightArrow" onclick=nextImg()>❯</button>
-                    </div>
-                </section>
-                <li class="project-one">100 Project (HTML - CSS - JS)</li>
-                <table class="project-list tableHide">
-                    <tr>
-                        <th>Name</th>
-                        <th>Links</th>
-                    </tr>
-                    <tr>
-                        <td>01 - background video</td>
-                        <td><a href="https://github.com/Kaput92/100-project/tree/main/01%20-%20background%20video">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>02 - Creative Loading Animation</td>
-                        <td><a href="https://github.com/Kaput92/100-project/tree/main/02%20-%20Creative%20Loading%20Animation">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>03 - Custom Scrollbar</td>
-                        <td><a href="https://github.com/Kaput92/100-project/tree/main/03%20-%20Custom%20Scrollbar">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>04 - Creative Image Hover Effect</td>
-                        <td><a href="https://github.com/Kaput92/100-project/tree/main/04%20-%20Creative%20Image%20Hover%20Effect">GitHub</a></td>
-                    </tr>
-                </table>
-            </div>
-            <!-- <li><a class="link" href="#">Project 2</a></li>
-            <li><a class="link" href="#">Project 3</a></li> -->
-        </ul>
 
-        <h3>Skills</h3>
-        <div class="icons">
+        <div class="about" id="about">
+          <h1>About Me</h1>
+          <img src="media/about.avif" width="200" height="200" />
+          <p>
+            My name is Emanuele <br />
+            I'm 30 years old and I'm a web developer from Italy.
+          </p>
+        </div>
+        <div id="projects" class="projects">
+          <h1>Projects</h1>
+          <p>100 Projects in 100 Days</p>
+          <img
+            src="https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            width="400"
+            height="300"
+            alt=""
+          />
+        </div>
+        <div id="contact" class="contact">
+          <h1>Contact</h1>
+          <h3>Emanuele</h3>
+          <div class="ref">
             <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-css3"></i>
             <i class="fa-brands fa-js"></i>
             <i class="fa-solid fa-database"></i>
+          </div>
+
+          <p>Phone: <span> +39 1234567890</span></p>
+          <p>Email: <a href="mailto:ZTj2R@example.com">mail@example.com</a></p>
         </div>
+      </div>
+    </div>
 
-
-        <footer>
-            <h5>Email: exemple@mail.com</h5>
-        </footer>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
