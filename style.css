@@ -5,6 +5,7 @@ body {
   font-family: "Inknut Antiqua", serif;
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
+  overflow: hidden;
   background-image: linear-gradient( #243949 0%, #517fa4 100%);
 }
 
@@ -85,8 +86,8 @@ body {
 
 .menu {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50px;
+  left: 50px;
   font-size: 2rem;
   padding: 15px;
   color: #fff;
@@ -94,11 +95,21 @@ body {
   z-index: 2;
   visibility: visible;
   text-shadow: 1px 1px 1px #000;
+  animation: view 0.5s ease-in-out;
+}
+
+@keyframes view {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .close-menu {
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 4px;
   font-size: 2rem;
   padding: 15px;
@@ -258,6 +269,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  animation: view 0.5s ease-in-out;
 }
 
 .main h1 {
