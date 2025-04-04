@@ -4,7 +4,6 @@ const menu = document.querySelector(".menu");
 const closeMenu = document.querySelector(".close-menu");
 const nav = document.querySelector(".nav");
 
-
 menu.addEventListener("click", () => {
   nav.style.visibility = "visible";
   nav.classList.add("visible");
@@ -13,6 +12,18 @@ menu.addEventListener("click", () => {
 });
 
 closeMenu.addEventListener("click", () => {
+  nav.classList.remove("visible");
+  closeMenu.style.visibility = "hidden";
+  menu.style.visibility = "visible";
+
+  setTimeout(() => {
+    nav.style.visibility = "hidden";
+  }, 0);
+});
+
+/* nav to page */
+
+nav.addEventListener("mouseleave", () => {
   nav.classList.remove("visible");
   closeMenu.style.visibility = "hidden";
   menu.style.visibility = "visible";
