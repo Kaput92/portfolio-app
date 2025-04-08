@@ -176,6 +176,7 @@ body {
 
 .projects {
   height: 500px;
+  width: 80vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -191,12 +192,16 @@ body {
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+
+  
 }
 
 .projects .project-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .projects h1 {
@@ -211,6 +216,21 @@ body {
   object-fit: cover;
   box-shadow: 1px 1px 10px #000;
 }
+
+.projects img:hover {
+  box-shadow: 1px 1px 20px #fff;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+.link:hover {
+  color: rgb(255, 230, 0);
+  transition: color .3s ease-in-out;
+}
+
 
 /* contact */
 .contact.active {
