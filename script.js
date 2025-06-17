@@ -21,18 +21,6 @@ closeMenu.addEventListener("click", () => {
   }, 0);
 });
 
-/* nav to page */
-
-nav.addEventListener("mouseleave", () => {
-  nav.classList.remove("visible");
-  closeMenu.style.visibility = "hidden";
-  menu.style.visibility = "visible";
-
-  setTimeout(() => {
-    nav.style.visibility = "hidden";
-  }, 0);
-});
-
 /* Main */
 
 const main = document.querySelector(".main");
@@ -51,6 +39,14 @@ aboutContent.addEventListener("click", () => {
   if (!about.classList.contains("active")) {
     main.style.visibility = "visible";
   }
+
+  nav.classList.remove("visible");
+  closeMenu.style.visibility = "hidden";
+  menu.style.visibility = "visible";
+
+  setTimeout(() => {
+    nav.style.visibility = "hidden";
+  }, 0);
 });
 
 /* Projects */
@@ -67,6 +63,14 @@ projectsContent.addEventListener("click", () => {
   if (!projects.classList.contains("active")) {
     main.style.visibility = "visible";
   }
+
+    nav.classList.remove("visible");
+  closeMenu.style.visibility = "hidden";
+  menu.style.visibility = "visible";
+
+  setTimeout(() => {
+    nav.style.visibility = "hidden";
+  }, 0);
 });
 
 /* Contact */
@@ -83,4 +87,12 @@ contactContent.addEventListener("click", () => {
   if (!contact.classList.contains("active")) {
     main.style.visibility = "visible";
   }
+
+    nav.classList.remove("visible");
+  closeMenu.style.visibility = "hidden";
+  menu.style.visibility = "visible";
+
+  setTimeout(() => {
+    nav.style.visibility = "hidden";
+  }, 0);
 });
