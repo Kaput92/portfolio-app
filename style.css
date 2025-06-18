@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
 
+/* html {
+background-color: #517fa4;
+} */
+
 body {
   text-align: justify;
   font-family: "Inknut Antiqua", serif;
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
   overflow: hidden;
-  background-image: linear-gradient(#243949 0%, #517fa4 100%);
+  background-image: url(https://images.unsplash.com/photo-1572557798994-41431698dc8d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   width: 100vw;
-  height: 100vh
+  height: 100vh;
 }
 
 /* two sides */
@@ -27,7 +31,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(102, 127, 161, 0.9);
+  background: rgb(7, 11, 17);
   text-shadow: 1px 1px 1px #000;
   font-size: 1.2rem;
   visibility: hidden;
@@ -80,7 +84,6 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-
 /* menu buttons */
 .menu {
   position: fixed;
@@ -103,7 +106,7 @@ body {
 .close-menu {
   position: fixed;
   top: 30px;
-  right:15px;
+  right: 20px;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
@@ -195,8 +198,6 @@ body {
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-
-  
 }
 
 .projects .project-container {
@@ -222,7 +223,7 @@ body {
 
 .projects img:hover {
   box-shadow: 1px 1px 20px #fff;
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .link {
@@ -231,9 +232,8 @@ body {
 }
 .link:hover {
   color: rgb(255, 230, 0);
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
-
 
 /* contact */
 .contact.active {
@@ -317,5 +317,30 @@ body {
 @media (max-width: 425px) {
   .nav ul li a {
     font-size: 0.9rem;
+  }
+}
+
+/* Breakpoints */
+
+@media screen and (max-width: 425px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav .menu,
+  .nav .close-menu {
+    font-size: .9rem;
+    display: flex;
+    align-self: center;;
+    border-radius: 50%;
+    margin-top: -25px;
+    margin-right: -10px;
+  background: rgb(7, 11, 17);
+  }
+  
+  .main {
+    height: 80vh;
+    width: 100vw;
+    margin-left: 40px;
   }
 }
