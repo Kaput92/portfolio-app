@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
 
-/* html {
-background-color: #517fa4;
-} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 body {
   text-align: justify;
@@ -357,25 +365,16 @@ body {
     font-size: 2rem;
   }
 
-  .content {
-    position: relative;
-    left: 65px;
-  }
-
   .about.active {
-    width: 300px;
+    width: 400px;
     height: 500px;
-    position: relative;
-    top: 140px;
-    left: 180px;
+    margin-left: 15px;
   }
 
   .projects.active {
-    width: 300px;
-    height: 600px;
-    position: relative;
-    top: -25px;
-    left: 180px;
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
   }
 
   .contact.active h1 {
@@ -392,10 +391,7 @@ body {
 
   .contact.active {
     width: 300px;
-    height: 600px;
-    position: relative;
-    top: -20px;
-    left: 140px;
+    height: 350px;
   }
 
   .contact.active .ref {
@@ -415,6 +411,49 @@ body {
   .nav .close-menu:hover {
     color: red;
     transition: color 0.3s ease-in-out;
+  }
+
+  .about.active {
+    width: 600px;
+    height: 500px;
+  }
+
+  .about.active h1 {
+    font-size: 2rem;
+  }
+
+  .about.active p {
+    font-size: 1rem;
+  }
+
+  .projects.active {
+    width: 700px;
+    height: 400px;
+  }
+
+  .projects.active h1 {
+    font-size: 2rem;
+  }
+
+  .projects.active p {
+    font-size: 1rem;
+  }
+
+  .contact.active {
+    width: 600px;
+    height: 400px;
+  }
+
+  .contact.active h1 {
+    font-size: 2rem;
+  }
+
+  .contact.active h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact.active p {
+    font-size: 1rem;
   }
 
   .contact.active .ref {
@@ -452,11 +491,8 @@ body {
   }
 
   .about.active {
-    width: 700px;
-    height: 650px;
-    position: relative;
-    top: -380px;
-    left: 380px;
+    width: 800px;
+    height: 600px;
   }
 
   .about.active h1 {
@@ -468,11 +504,8 @@ body {
   }
 
   .projects.active {
-    width: 700px;
-    height: 800px;
-    position: relative;
-    top: -425px;
-    left: 380px;
+    width: 800px;
+    height: 500px;
   }
 
   .projects.active h1 {
@@ -485,10 +518,7 @@ body {
 
   .contact.active {
     width: 700px;
-    height: 800px;
-    position: relative;
-    top: -425px;
-    left: 380px;
+    height: 500px;
   }
 
   .contact.active h1 {
