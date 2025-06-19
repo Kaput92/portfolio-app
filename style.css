@@ -7,10 +7,12 @@ background-color: #517fa4;
 body {
   text-align: justify;
   font-family: "Inknut Antiqua", serif;
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
   overflow: hidden;
-  background-image: url(https://images.unsplash.com/photo-1572557798994-41431698dc8d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url(images/background.avif);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
   width: 100vw;
   height: 100vh;
 }
@@ -322,9 +324,58 @@ body {
 
 /* Breakpoints */
 
+@media screen and (max-width: 320px) {
+
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    position: relative;
+    left: 65px;
+  }
+
+  .about.active {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top: 140px;
+    left: 180px;
+  }
+
+  .projects.active {
+    width: 300px;
+    height: 600px;
+    position: relative;
+    top: -25px;
+    left: 180px;
+  }
+
+  .contact.active h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact.active h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact.active {
+    width: 300px;
+    height: 600px;
+    position: relative;
+    top: 90px;
+    left: 135px;
+  }
+
+}
+
 @media screen and (max-width: 425px) {
   .nav {
     width: 100%;
+  }
+
+  .nav ul li a {
+    font-size: 1rem;
   }
 
   .nav .menu,
@@ -335,7 +386,10 @@ body {
     border-radius: 50%;
     margin-top: -25px;
     margin-right: -10px;
-  background: rgb(7, 11, 17);
+  }
+
+  .nav .menu {
+    background: rgb(7, 11, 17);
   }
   
   .main {
