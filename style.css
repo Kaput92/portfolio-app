@@ -332,23 +332,130 @@ body {
 
 /* Breakpoints */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 320px) {
+
   .nav {
     width: 100%;
   }
 
   .nav ul li a {
-    font-size: 1rem;
+    font-size: .7rem;
   }
 
   .nav .menu,
   .nav .close-menu {
-    font-size: .9rem;
+    font-size: .7rem;
     display: flex;
     align-self: center;
     border-radius: 50%;
     margin-top: -25px;
     margin-right: -25px;
+  }
+
+  .nav .close-menu:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav .menu {
+    font-size: 1.5rem;
+  }
+  
+  .main {
+    margin-left: 90px;
+    margin-top: -240px;
+  }
+
+    .main h1 {
+    font-size: 2rem;
+  }
+
+  .main img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about.active {
+    width: 300px;
+    height: 350px;
+    margin-left: 45px;
+    margin-top: -55px;
+  }
+
+  .about.active img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 0.7rem;
+  }
+
+  .projects.active {
+    width: 350px;
+    height: 300px;
+    margin-left: 45px;
+    margin-top: -75px;
+  }
+
+  .projects h1 {
+    font-size: 1.5rem;
+  }
+
+  .projects p {
+    font-size: 0.7rem;
+  }
+
+  .contact.active {
+    width: 300px;
+    height: 300px;
+    margin-left: 25px;
+    margin-top: -75px;
+  }
+
+  .contact h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact h3 {
+    font-size: 1rem;
+  }
+
+  .contact p {
+    font-size: 0.7rem;
+  }
+
+  .contact .ref {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 425px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul li a {
+    font-size: .8rem;
+  }
+
+  .nav .menu,
+  .nav .close-menu {
+    font-size: .7rem;
+    display: flex;
+    align-self: center;
+    border-radius: 50%;
+    margin-top: -25px;
+    margin-right: -25px;
+  }
+
+  .nav .close-menu:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
   }
 
   .nav .menu {
@@ -358,7 +465,111 @@ body {
   .main {
     height: 80vh;
     width: 100vw;
-    margin-left: 40px;
+    margin-left: 70px;
+    margin-top: -230px;
+  }
+
+    .main h1 {
+    font-size: 2rem;
+  }
+
+  .main img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about.active {
+    width: 400px;
+    height: 300px;
+    margin-left: 32px;
+    margin-top: -75px;
+  }
+
+  .about.active img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 0.7rem;
+  }
+
+  .projects.active {
+    width: 350px;
+    height: 280px;
+    margin-left: 36px;
+    margin-top: -85px;
+  }
+
+  .projects h1 {
+    font-size: 1.5rem;
+  }
+
+  .projects p {
+    font-size: 0.7rem;
+  }
+
+  .contact.active {
+    width: 300px;
+    height: 300px;
+    margin-left: 25px;
+    margin-top: -75px;
+  }
+
+  .contact h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact h3 {
+    font-size: 1rem;
+  }
+
+  .contact p {
+    font-size: 0.7rem;
+  }
+
+  .contact .ref {
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul li a {
+    font-size: .8rem;
+  }
+
+  .nav .menu,
+  .nav .close-menu {
+    font-size: .7rem;
+    display: flex;
+    align-self: center;
+    border-radius: 50%;
+    margin-top: -25px;
+    margin-right: -25px;
+  }
+
+  .nav .close-menu:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav .menu {
+    font-size: 1.5rem;
+  }
+  
+  .main {
+    height: 80vh;
+    width: 100vw;
+    margin-left: 45px;
   }
 
     .main h1 {
@@ -367,41 +578,64 @@ body {
 
   .about.active {
     width: 400px;
-    height: 500px;
-    margin-left: 15px;
-  }
-
-  .projects.active {
-    width: 400px;
-    height: 400px;
+    height: 320px;
     margin-left: 20px;
   }
 
-  .contact.active h1 {
+  .projects.active {
+    width: 420px;
+    height: 300px;
+    margin-top: -80px;
+    margin-left: 20px;
+  }
+
+  .projects.active h1 {
     font-size: 1.5rem;
   }
 
-  .contact.active h3 {
-    font-size: 1.25rem;
+  .projects.active p {
+    font-size: .7rem;
   }
 
-  .contact.active p {
-    font-size: .9rem;
+  .projects.active .project1 {
+    margin-right: 20px;
+  }
+
+  .projects.active .project2 {
+    margin-left: 20px;
   }
 
   .contact.active {
     width: 300px;
-    height: 350px;
+    height: 250px;
+    margin-top: -100px;
+    margin-left: 15px;
+  }
+
+    .contact.active h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact.active h3 {
+    font-size: 1rem;
+  }
+
+  .contact.active p {
+    font-size: .7rem;
   }
 
   .contact.active .ref {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .nav {
     width: 100%;
+  }
+
+   .nav ul li a {
+    font-size: 1.3rem;
   }
 
   .nav .close-menu {
@@ -462,7 +696,183 @@ body {
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  .nav .menu {
+    font-size: 2rem;
+  }
+  .nav .close-menu {
+    font-size: 1rem;
+    margin-top: -20px;
+    margin-right: -45px;
+  }
+
+  .nav .close-menu:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .main {
+    margin-top: -130px;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about.active {
+    width: 600px;
+    height: 450px;
+  }
+
+  .about.active h1 {
+    font-size: 2rem;
+  }
+
+  .about.active p {
+    font-size: 1rem;
+  }
+
+  .projects.active {
+    width: 700px;
+    height: 400px;
+    margin-top: -25px;
+  }
+
+  .projects.active h1 {
+    font-size: 2rem;
+  }
+
+  .projects.active p {
+    font-size: 1rem;
+  }
+
+  .contact.active {
+    width: 400px;
+    height: 350px;
+    margin-top: -40px;
+  }
+
+  .contact.active h1 {
+    font-size: 2rem;
+  }
+
+  .contact.active h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact.active .ref {
+    font-size: 2rem;
+  }
+
+  .contact.active p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  .nav .menu {
+    font-size: 2rem;
+  }
+  .nav .close-menu {
+    font-size: 1rem;
+    margin-top: -20px;
+    margin-right: -45px;
+  }
+
+  .nav .close-menu:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .main {
+    margin-top: -170px;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about.active {
+    width: 600px;
+    height: 450px;
+    margin-top: -20px;
+  }
+
+  .about.active h1 {
+    font-size: 2rem;
+  }
+
+  .about.active p {
+    font-size: 1rem;
+  }
+
+  .projects.active {
+    width: 700px;
+    height: 400px;
+    margin-top: -45px;
+  }
+
+  .projects.active h1 {
+    font-size: 2rem;
+  }
+
+  .projects.active p {
+    font-size: 1rem;
+  }
+
+  .contact.active {
+    width: 400px;
+    height: 350px;
+    margin-top: -75px;
+  }
+
+  .contact.active h1 {
+    font-size: 2rem;
+  }
+
+  .contact.active h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact.active .ref {
+    font-size: 2rem;
+  }
+
+  .contact.active p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .nav {
+    width: 100%;
+  }
 
   .nav ul li a {
     font-size: 2rem;
@@ -471,14 +881,19 @@ body {
   .nav .menu {
     font-size: 3rem;
   }
-
   .nav .close-menu {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: -10px;
+    margin-right: -25px;
+  }
+
+  .nav .close-menu:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
   }
 
   .main {
-    position: relative;
-    top: -150px;
+    margin-top: -330px;
   }
 
   .main h1 {
@@ -492,7 +907,13 @@ body {
 
   .about.active {
     width: 800px;
-    height: 600px;
+    height: 850px;
+    margin-top: 5px;
+  }
+
+  .about.active img {
+    width: 500px;
+    height: 500px;
   }
 
   .about.active h1 {
@@ -504,8 +925,14 @@ body {
   }
 
   .projects.active {
-    width: 800px;
-    height: 500px;
+    width: 1000px;
+    height: 650px;
+    margin-top: -90px;
+  }
+
+  .projects.active img {
+    width: 60%;
+    margin-top: 20px;
   }
 
   .projects.active h1 {
@@ -513,12 +940,13 @@ body {
   }
 
   .projects.active p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .contact.active {
     width: 700px;
     height: 500px;
+    margin-top: -170px;
   }
 
   .contact.active h1 {
@@ -527,6 +955,10 @@ body {
 
   .contact.active h3 {
     font-size: 2rem;
+  }
+
+  .contact.active .ref {
+    font-size: 2.5rem;
   }
 
   .contact.active p {
