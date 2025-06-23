@@ -446,11 +446,8 @@ body {
   .nav .menu,
   .nav .close-menu {
     font-size: .7rem;
-    display: flex;
-    align-self: center;
-    border-radius: 50%;
-    margin-top: -25px;
-    margin-right: -25px;
+    margin-top: -15px;
+    margin-right: -45px;
   }
 
   .nav .close-menu:hover {
@@ -515,7 +512,7 @@ body {
 
   .contact.active {
     width: 300px;
-    height: 300px;
+    height: 250px;
     margin-left: 25px;
     margin-top: -75px;
   }
@@ -533,7 +530,7 @@ body {
   }
 
   .contact .ref {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -567,9 +564,8 @@ body {
   }
   
   .main {
-    height: 80vh;
-    width: 100vw;
     margin-left: 45px;
+    margin-top: -150px;
   }
 
     .main h1 {
@@ -580,6 +576,19 @@ body {
     width: 400px;
     height: 320px;
     margin-left: 20px;
+  }
+
+  .about.active img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 0.7rem;
   }
 
   .projects.active {
@@ -639,7 +648,9 @@ body {
   }
 
   .nav .close-menu {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-top: -15px;
+    margin-right: -35px;
   }
 
   .nav .close-menu:hover {
@@ -647,9 +658,18 @@ body {
     transition: color 0.3s ease-in-out;
   }
 
+    .main {
+    margin-left: 45px;
+    margin-top: -150px;
+  }
+
+    .main h1 {
+    font-size: 2rem;
+  }
+
   .about.active {
     width: 600px;
-    height: 500px;
+    height: 450px;
   }
 
   .about.active h1 {
@@ -674,8 +694,8 @@ body {
   }
 
   .contact.active {
-    width: 600px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
   }
 
   .contact.active h1 {
@@ -691,7 +711,7 @@ body {
   }
 
   .contact.active .ref {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
 }
